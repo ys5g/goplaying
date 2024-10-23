@@ -8,6 +8,15 @@ This is a basic Now Playing TUI written in Go. I wanted a simple way to see what
 
 ## Installation
 
+### Arch Linux
+
+You can install GoPlaying from the AUR with the package `goplaying-git`.
+```bash
+yay -S goplaying-git
+```
+
+### Manual
+
 ### Dependencies
 
 - [go]
@@ -27,4 +36,4 @@ The controls are basic vim controls:
 
 ## License
 
-No license. Do whatever you want with this code. I made it for Hacktoberfest and to learn Go.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
