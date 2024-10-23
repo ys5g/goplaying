@@ -1,4 +1,4 @@
-module GoPlaying
+module goplaying
 
 go 1.23.2
 

@@ -10,7 +10,7 @@ This is a basic Now Playing TUI written in Go. I wanted a simple way to see what
 
 ### Dependencies
 
-- [Go]
+- [go]
 - [playerctl]
 
 1. Clone the repository
