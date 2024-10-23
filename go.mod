@@ -1,4 +1,4 @@
-module now_playing
+module GoPlaying
 
 go 1.23.2
 
