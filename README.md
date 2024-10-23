@@ -19,16 +19,32 @@ yay -S goplaying-git
 
 ### Dependencies
 
-- [go]
-- [playerctl]
+- go
+- playerctl
 
 1. Clone the repository
-2. Run `go build`
-3. Run `./GoPlaying`
+```bash
+git clone https://github.com/justinmdickey/goplaying.git
+```
+
+2. cd into the directory
+```bash
+cd goplaying
+```
+
+3. Run `go build`
+```bash
+go build
+```
+
+4. Run `./goplaying`
+```bash
+./goplaying
+```
 
 ## Usage
 
-The controls are basic vim controls:
+The controls are basic vim keybinds:
 - `p` - Play/Pause
 - `n` - Next
 - `b` - Previous
