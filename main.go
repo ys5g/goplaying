@@ -75,7 +75,7 @@ func getSongInfo(player string) (string, error) {
 	status := strings.TrimSpace(info[3])
 
 	// Get song length
-	cmd = exec.Command("playerctl", "metadata", "mpris:length")
+	cmd = exec.Command("playerctl", "-p", player, "metadata", "mpris:length")
 	out.Reset()
 	cmd.Stdout = &out
 	err = cmd.Run()
@@ -90,7 +90,7 @@ func getSongInfo(player string) (string, error) {
 	songLengthSeconds = songLengthSeconds / 1e6 // Convert to seconds
 
 	// Get current position
-	cmd = exec.Command("playerctl", "position")
+	cmd = exec.Command("playerctl", "-p", player, "position")
 	out.Reset()
 	cmd.Stdout = &out
 	err = cmd.Run()
