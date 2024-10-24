@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 	"errors"
+	"flag"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
@@ -139,7 +140,22 @@ func controlPlayer(command string) error {
 }
 
 func main() {
-	player := "spotify" // e.g., "spotify"
+	var playerName string
+	var playerNameShort string
+
+	flag.StringVar(&playerName, "player", "", "Player name")
+	flag.StringVar(&playerNameShort, "p", "", "Player name)")
+	flag.Parse()
+
+	var player string
+
+	if playerName != "" {
+		player = playerName
+	} else if playerNameShort != "" {
+		player = playerNameShort
+	} else {
+		player = ""
+	}
 
 	// Create a TextView widget
 	songText := tview.NewTextView().
